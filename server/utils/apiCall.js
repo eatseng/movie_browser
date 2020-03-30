@@ -5,9 +5,9 @@ const apiCall = module.exports = (endPointOptions, payload) => {
 
   return new Promise ((resolve, reject) => {
 
-    var data = JSON.stringify(payload);
+    const data = JSON.stringify(payload);
 
-    var req = https.request(endPointOptions, (resp) => {
+    const req = https.request(endPointOptions, (resp) => {
       let str;
 
       resp.setEncoding('utf8');

@@ -7,14 +7,14 @@ function TypeaheadRow(props) {
     ? "typeaheadRow typeaheadHighlight"
     : "typeaheadRow typeaheadNormal";
   return (
-  	<div className={style} key={props.id} onClick={props.onClick}>
+    <div className={style} key={props.id} onClick={props.onClick}>
       <img
         alt={props.title}
         className="typeaheadImage"
         src={`https://image.tmdb.org/t/p/w154${props.posterPath}`}
         width={45} />
       <div className='typeaheadTitle'>{props.title}</div>
-  	</div>
+    </div>
   );
 }
 

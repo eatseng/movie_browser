@@ -1,5 +1,5 @@
 .popularMovies {
-	display: 'flex';
+  display: 'flex';
 }
 
 .movieList {
@@ -9,11 +9,11 @@
 }
 
 .navBar {
-	background-color: #0F0932;
-	color: #1CE0F3;
-	font-size: 24px;
-	font-weight: 800;
-	min-height: 64px;
+  background-color: #0F0932;
+  color: #1CE0F3;
+  font-size: 24px;
+  font-weight: 800;
+  min-height: 64px;
 }
 
 .navBarTitle {

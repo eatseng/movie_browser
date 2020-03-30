@@ -22,7 +22,7 @@ function MovieThumbnail(props) {
   };
 
   return (
-  	<div className="movieThumbnail" onClick={clickHandler}>
+    <div className="movieThumbnail" onClick={clickHandler}>
       <img
         alt={props.title}
         className="movieThumbnailImage"
@@ -33,7 +33,7 @@ function MovieThumbnail(props) {
       </div>
       <div className='thumbnailTitle'>{props.title}</div>
       <div className='thumbnailRelaseDate'>{dateString}</div>
-  	</div>
+    </div>
   );
 }
 

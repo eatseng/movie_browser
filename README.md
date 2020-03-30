@@ -20,8 +20,8 @@ go to http://localhost:3000 in your chrome browser.
 
 if the landing page doesn't have movie thumbnails at the bottom half of the screen, it means your TMDB api_key is not valid or that the .env file is not in the app root directory. contact edwardtseng@gmail.com
 
-![movie landing page](https://photos.app.goo.gl/D83kSKaGSVJ96UM69)
+![movie landing page](https://live.staticflickr.com/65535/49714859638_aa23628c13_w_d.jpg)
 
-![movie typeahead page](https://photos.app.goo.gl/zJPYUBFrNVXhqVcn9)
+![movie typeahead page](https://www.flickr.com/photos/44124464021@N01/49715716607/sizes/l/)
 
-![movie detail page](https://photos.app.goo.gl/ihH6turdp7r1yC819)
+![movie detail page](https://live.staticflickr.com/65535/49714859588_3a904b73c4_w_d.jpg)

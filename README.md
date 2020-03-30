@@ -2,12 +2,18 @@ This application is built using create-react-app, GraphQL, and Relay on top of N
 
 ## Installation
 
-git clone the respository
+git clone the respository at https://github.com/eatseng/movie_browser
 
-create .env file in the root directory and create an entry for TMDB_API_KEY = 'api_key'
+in app root directory, enter 'touch .env', then insert an entry TMDB_API_KEY = 'api_key' in the .env file. The api_key is your TMDB api key.
 
-## Start server
+install dependencies by running 'npm install'
 
-npm run dev
+## Start web server
 
-go to http://localhost:3000 in your chrome browser
+in app root directory, enter 'npm run dev' in terminal.
+
+go to http://localhost:3000 in your chrome browser.
+
+## Troubleshooting
+
+if the landing page doesn't have movie thumbnails at the bottom half of the screen, it means your TMDB api_key is not valid or that the .env file is not in the app root directory. contact edwardtseng@gmail.com

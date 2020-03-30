@@ -1,12 +1,52 @@
+import MovieDetails from './components/MovieDetails.react'
+import PopularMovies from './components/PopularMovies.react';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {RelayEnvironmentProvider} from 'react-relay/hooks';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import RelayEnvironment from './relay/RelayEnvironment';
 import * as serviceWorker from './serviceWorker';
+
+import './index.css';
+
+const {Suspense} = React;
+
+function movieDetailsLoader () {
+  return (
+    <RelayEnvironmentProvider environment={RelayEnvironment}>
+      <Suspense fallback={'Loading...'}>
+        <MovieDetails />
+      </Suspense>
+    </RelayEnvironmentProvider>
+  );
+}
+
+function popularMovieLoader () {
+  return (
+    <RelayEnvironmentProvider environment={RelayEnvironment}>
+      <Suspense fallback={'Loading...'}>
+        <PopularMovies />
+      </Suspense>
+    </RelayEnvironmentProvider>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          {popularMovieLoader}
+        </Route>
+        <Route exact path="/movie">
+          {movieDetailsLoader}
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,12 @@
+.searchBar {
+	border-radius: 24px;
+  color: #676f75;
+	font-size: 16px;
+	font-weight: 600;
+	height: 32px;
+	margin: 52px 0px 0px 0px;
+  outline: none;
+  padding-left: 12px;
+	width: 100%;
+}
+

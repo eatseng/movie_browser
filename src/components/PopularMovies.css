@@ -1,0 +1,41 @@
+.popularMovies {
+	display: 'flex';
+}
+
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.navBar {
+	background-color: #0F0932;
+	color: #1CE0F3;
+	font-size: 24px;
+	font-weight: 800;
+	min-height: 64px;
+}
+
+.navBarTitle {
+  cursor: pointer;
+  padding: 16px;
+}
+
+.searchPane {
+  background-color: #3981bd;
+  height: 200px;
+  margin: 0px 40px 40px 40px;
+  padding: 60px 40px 40px 40px;
+}
+
+.searchPaneTitle {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.searchPaneTagLine {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}

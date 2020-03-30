@@ -1,0 +1,32 @@
+.typeaheadRow {
+  align-items: center;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+	display: flex;
+  flex-direction: row;
+  margin: 0px 16px 0px 16px;
+  position: relative;
+  z-index: 100;
+}
+
+.typeaheadHighlight {
+  background-color: #c4e6ff;
+}
+
+.typeaheadImage {
+  border-radius: 4px;
+}
+
+
+.typeaheadNormal {
+  background-color: white;
+}
+
+.typeaheadTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0px 16px 0px 16px;
+}

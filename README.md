@@ -2,6 +2,16 @@ Built using create-react-app, GraphQL, and Relay on top of Node.js.
 
 Featuring simple typeahead search bar
 
+## Search and typehead behavior
+
+search bar is a naive string match with title of popular movie. When enter is pressed, popular movie list is updated with search phrase hits.
+
+typehead behavior is as follows:
+
+before -> user type in something, typeahead shows up, user click on typehead row, search bar auto completes, but does not initate search until enter is pressed. When enter is pressed, popular movie list updates.
+
+now -> user type in something, typeahead shows up, user click on typehead row, and user is taken directly to movie details page.
+
 ## Installation
 
 git clone the respository at https://github.com/eatseng/movie_browser

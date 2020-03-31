@@ -1,6 +1,8 @@
 import React from 'react';
 import TypeaheadRow from './TypeaheadRow.react'
 
+import {useHistory} from "react-router-dom";
+
 import './SearchBar.css';
 
 const {useCallback, useEffect, useMemo, useState} = React;
@@ -11,6 +13,8 @@ function SearchBar(props) {
   const [isShowTypeahead, setIsShowTypeahead] = useState(false);
   const [searchString, setSearchString] = useState('');
   const [searchIndex, setSearchIndex] = useState(null);
+
+  const history = useHistory();
 
   const typeaheadList = useMemo(() => {
     return searchString !== ''
@@ -27,7 +31,10 @@ function SearchBar(props) {
   }, [setSearchString])
 
   const onClickHandler = useCallback((searchIndex) => () => {
-    setSearchString(typeaheadList[searchIndex]?.title);
+    history.push({
+      pathname: '/movie',
+      search: `?id=${typeaheadList[searchIndex].id}`,
+    });
     setSearchIndex(null);
     setIsShowTypeahead(false);
   }, [typeaheadList])
@@ -98,7 +105,8 @@ function SearchBar(props) {
             {...movie}
             isSelected={index === searchIndex}
             key={movie.id}
-            onClick={onClickHandler(index)} />
+            onClick={onClickHandler(index)} 
+            />
         )
         .slice(0, NUMBER_TYPEAHEAD_DISPLAYED)
       }
